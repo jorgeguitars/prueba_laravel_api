@@ -17,10 +17,9 @@ class PostResource extends JsonResource
         return [
             'id'=> $this->id,
             'categoria' => $this->nombre,
-            'comentario' => $this->contenido,
             'titulo' => $this->titulo,
             'contenido' => $this->contenido,         
-           // 'comentario'=> ComentarioResource::collection($this->contenido),
+         //'comentario'=> ComentarioResource::collection($this->contenido),
             'created_at' => Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)
              ->format('d-m-Y')
         ];

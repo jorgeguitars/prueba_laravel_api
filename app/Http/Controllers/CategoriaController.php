@@ -53,7 +53,6 @@ class CategoriaController extends Controller
     public function show(Categoria $categoria)
     {
         //
-
         return Categoria::findOrFail($categoria->id);
     }
 
