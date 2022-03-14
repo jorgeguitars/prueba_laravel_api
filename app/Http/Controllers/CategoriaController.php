@@ -42,6 +42,7 @@ class CategoriaController extends Controller
         $categoria ->nombre = $request->nombre;
 
         $categoria->save();
+        return \response(content: "Categoria Creada");
     }
 
     /**

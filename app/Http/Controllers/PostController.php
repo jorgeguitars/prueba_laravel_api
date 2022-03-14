@@ -51,6 +51,7 @@ class PostController extends Controller
                $post->titulo = $request->titulo;
                $post->contenido = $request->contenido;
                $post ->save();
+               return \response(content: "Post Creado");
 
 
 

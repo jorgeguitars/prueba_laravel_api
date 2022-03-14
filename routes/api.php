@@ -23,23 +23,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //categoria
 Route::get('/categorias', [CategoriaController::class,'index']);
+Route::get('/categorias/{categoria}', [CategoriaController::class,'show']);
 Route::post('/categorias', [CategoriaController::class,'store']);
 Route::put('/categorias/{id}', [CategoriaController::class,'update']);
 Route::delete('/categorias/{id}', [CategoriaController::class,'destroy']);
-Route::get('/categorias/{id}', [CategoriaController::class,'show']);
+
 
 //Posts
 
 Route::get('/posts', [PostController::class,'index']);
-Route::post('/posts', [PostController::class,'store']);
 Route::get('/posts/{post}', [PostController::class,'show']);
+Route::post('/posts', [PostController::class,'store']);
 Route::put('/posts/{id}', [PostController::class,'update']);
 Route::delete('/posts/{id}', [PostController::class,'destroy']);
 
 //comentarios
 
 Route::get('/comentarios', [ComentarioController::class,'index']);
-Route::post('/comentarios', [ComentarioController::class,'store']);
 Route::get('/comentarios/{comentario}', [ComentarioController::class,'show']);
+Route::post('/comentarios', [ComentarioController::class,'store']);
 Route::put('/comentarios/{id}', [ComentarioController::class,'update']);
 Route::delete('/comentarios/{id}', [ComentarioController::class,'destroy']);
